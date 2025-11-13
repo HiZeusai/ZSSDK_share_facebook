@@ -8,7 +8,7 @@ let package = Package(
     products: [
         .library(
             name: "Share_Facebook",
-            targets: ["ShareFacebookBinary"]
+            targets: ["ShareFacebookWrapper"]
         ),
     ],
     dependencies: [
@@ -16,9 +16,17 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "ShareFacebookBinary",
+            name: "Share_Facebook",
             url: "https://github.com/HiZeusai/SDKPackage/releases/download/2.1.4/Share_Facebook.xcframework.zip",
             checksum: "320a412809488f0efa09bc2b0a3754e13bc96b2b2c941793b08ebf4d0244032d"
-        )
+        ),
+        .target(
+            name: "ShareFacebookWrapper",
+            dependencies: [
+                "Share_Facebook",
+                .product(name: "FacebookShare", package: "facebook-ios-sdk")
+            ],
+            path: "Sources"
+        ),
     ]
 )
