@@ -18,7 +18,7 @@ let package = Package(
         .binaryTarget(
             name: "Share_Facebook",
             url: "https://github.com/HiZeusai/SDKPackage/releases/download/2.1.5/Share_Facebook.xcframework.zip",
-            checksum: "ddc36867026d1bcc8d89d445482d850197c7b11f4585f1f053df7e4d1ed384ef"
+            checksum: "e9ef0999e2a560af86fb30efa6037663c7d51ed7f5f24b5addbce08b72382f4e"
         ),
         .target(
             name: "ShareFacebookWrapper",
