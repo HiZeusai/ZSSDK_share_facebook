@@ -6,19 +6,19 @@ import PackageDescription
 let package = Package(
     name: "ZSSDK_share_facebook",
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "ZSSDK_share_facebook",
-            targets: ["ZSSDK_share_facebook"]),
+            name: "Share_Facebook",
+            targets: ["ShareFacebookBinary"]
+        ),
+    ],
+    dependencies: [
+        .package(url: "https://github.com/facebook/facebook-ios-sdk.git", from: "13.2.1"),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "ZSSDK_share_facebook"),
-        .testTarget(
-            name: "ZSSDK_share_facebookTests",
-            dependencies: ["ZSSDK_share_facebook"]
-        ),
+        .binaryTarget(
+            name: "ShareFacebookBinary",
+            url: "https://github.com/HiZeusai/SDKPackage/releases/download/2.1.4/Share_Facebook.xcframework.zip",
+            checksum: "320a412809488f0efa09bc2b0a3754e13bc96b2b2c941793b08ebf4d0244032d"
+        )
     ]
 )
