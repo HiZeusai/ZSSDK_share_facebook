@@ -12,13 +12,13 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/facebook/facebook-ios-sdk.git", from: "13.2.1"),
+        .package(url: "https://github.com/facebook/facebook-ios-sdk.git", from: "15.0.0"),
     ],
     targets: [
         .binaryTarget(
             name: "Share_Facebook",
-            url: "https://github.com/HiZeusai/SDKPackage/releases/download/2.1.4/Share_Facebook.xcframework.zip",
-            checksum: "320a412809488f0efa09bc2b0a3754e13bc96b2b2c941793b08ebf4d0244032d"
+            url: "https://github.com/HiZeusai/SDKPackage/releases/download/2.1.5/Share_Facebook.xcframework.zip",
+            checksum: "ddc36867026d1bcc8d89d445482d850197c7b11f4585f1f053df7e4d1ed384ef"
         ),
         .target(
             name: "ShareFacebookWrapper",
